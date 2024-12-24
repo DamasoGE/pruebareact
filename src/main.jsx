@@ -18,6 +18,6 @@ root.render(myFirstElement); //El siguiente render lo sobreescribe
 
 root.render(
     <div>
-    <ScrollCounter />
+    <StateEx color='gray'/>
     </div>
 );

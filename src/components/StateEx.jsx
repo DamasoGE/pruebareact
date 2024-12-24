@@ -7,12 +7,22 @@ export default class StateEx extends React.Component {
         this.state={
             nombre: 'Damaso',
             edad: '33',
-            email: 'damaso@gmail.com'
+            email: 'damaso@gmail.com',
+            color: 'red'
         };
     }
 
-    static getDerivedStateFromProps(props){
-        return {color: props.color}
+    static getDerivedStateFromProps(props, state){ //state contiene las variables de estado
+        if (props.color) {
+            return { color: props.color };
+        }
+        return null;
+    }
+
+    componentDidMount(){ //NO FUNCIONA
+        setTimeout(() => {
+            this.setState({ color: "orange" })
+          }, 1000)
     }
 
         render(){
@@ -21,11 +31,12 @@ export default class StateEx extends React.Component {
                     <h1> Mi nombre es {this.state.nombre}</h1>
                     <p>Tengo {this.state.edad}</p>
                     <p>Mi email de Contacto es: {this.state.email}</p>
-                    <p>Color: {this.state.color}</p>
+                    <p style={{ color: this.state.color }}>Color</p>
                 </div>
             )
         }
 }
+
 
 StateEx.propTypes = {
     color: PropTypes.string,
