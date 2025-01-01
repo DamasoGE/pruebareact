@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import StateEx from './components/StateEx';
 import StateExClass from './components/StateExClass';
 
-
+const rama1 = "Esto es la rama1"
 
 const myFirstElement = <p> Mi primer párrafo
     <p>Otro parrafo</p>
