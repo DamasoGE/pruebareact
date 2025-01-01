@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Basic from './components/basic';
-import BasicProp from './components/BasicProp';
 import StateEx from './components/StateEx';
-import ScrollCounter from './components/ScrollCounter';
+import StateExClass from './components/StateExClass';
+
+
 
 const myFirstElement = <p> Mi primer párrafo
     <p>Otro parrafo</p>
@@ -18,6 +18,8 @@ root.render(myFirstElement); //El siguiente render lo sobreescribe
 
 root.render(
     <div>
-    <StateEx color='gray'/>
+    <StateExClass />
+    <StateEx />
     </div>
 );
+
