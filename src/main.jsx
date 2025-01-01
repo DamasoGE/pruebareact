@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import StateEx from './components/StateEx';
 import StateExClass from './components/StateExClass';
 
+const main = "Esta es la main";
 
 
 const myFirstElement = <p> Mi primer párrafo
