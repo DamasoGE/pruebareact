@@ -10,9 +10,9 @@ class ScrollCounter extends React.Component {
     }
 
     // Sincronizar estado con props (opcional, no usado en este ejemplo)
-    static getDerivedStateFromProps(props, state) {
-        return null; // No actualiza nada basado en props
-    }
+    // static getDerivedStateFromProps(props, state) {
+    //     return null; // No actualiza nada basado en props
+    // }
 
     // Decide si debe renderizarse el componente
     shouldComponentUpdate(nextProps, nextState) {
