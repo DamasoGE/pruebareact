@@ -1,33 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import StateEx from './components/StateEx';
-import StateExClass from './components/StateExClass';
-import Conditional from './components/Conditional';
-import Football from './components/Football';
-import ListaCoche from './components/ListaCoche';
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Layout from './pages/Layout';
+import Home from './pages/Home';
+import NoPage from './pages/NoPage';
+import Products from './pages/Products';
 
+const root = ReactDOM.createRoot(document.getElementById('root'))
 
-
-const myFirstElement = <p> Mi primer párrafo
-    <p>Otro parrafo</p>
-    </p>;
-
-
-const segundoElemento = React.createElement('h1',{},'no uso JSX!');
-console.log(segundoElemento);
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(myFirstElement); //El siguiente render lo sobreescribe
-
-const colored = 'blue';
+export default function App(){
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<Layout />}>
+                    <Route index element={<Home />} />
+                    <Route path="products" element={<Products />} />
+                    <Route path="*" element={<NoPage />} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    )
+}
 
 root.render(
-    <div>
-    <StateExClass color={ colored } />
-    <StateEx />
-    <Football nombre='damaso' />
-    <Conditional isTrue='true' />
-    <ListaCoche />
-    </div>
+    <App />
 );
 
