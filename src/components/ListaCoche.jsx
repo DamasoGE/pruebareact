@@ -4,13 +4,20 @@ const Car = (props)=>{
     return <li> I am { props.marca } </li>
 }
 
-export const ListaCoche = () =>{
+export const ListaCoche = () => {
+
+    const style = { // Objeto con todas las propiedades Style
+        color: "white",
+        backgroundColor: "DodgerBlue",
+        padding: "10px",
+        fontFamily: "Sans-Serif"
+    };
 
     const cars =  ['megane','mini','scout'];
 
     return (
         <>
-            <h1>Lista de coches</h1>
+            <h1 style={style}>Lista de coches</h1>
             <ul>
                 { cars.map((car, index)=> <Car key={ index } marca={ car } />) }
             </ul>

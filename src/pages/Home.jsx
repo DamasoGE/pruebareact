@@ -4,6 +4,7 @@ import Conditional from '../components/Conditional';
 import Football from '../components/Football';
 import ListaCoche from '../components/ListaCoche';
 import Form from '../components/Form';
+import Hooks from '../components/Hooks';
 
 
 const Home = () =>{
@@ -19,6 +20,7 @@ const Home = () =>{
             <Conditional isTrue='true' />
             <ListaCoche />
             <Form />
+            <Hooks />
             </div>
         </>
     );
